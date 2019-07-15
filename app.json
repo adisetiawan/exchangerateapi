@@ -4,4 +4,22 @@
   "repository": "https://github.com/adisetiawan/exchangerateapi",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "express", "api", "currency", "openexchangerates"],
+  "env": {
+    "OPENEX_APPID": {
+      "description": "app ID for https://docs.openexchangerates.org",
+      "value": "secret"
+    },
+    "OPENEX_URL": {
+      "description": "openexchangerates API",
+      "value": "https://openexchangerates.org/api/"
+    },
+    "EXPIRE": {
+      "description": "cache expired",
+      "value": 3600000
+    },
+    "PORT": {
+      "description": "openexchangerates API",
+      "value": 8888
+    }
+  }
 }
