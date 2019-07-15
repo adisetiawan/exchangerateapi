@@ -14,4 +14,8 @@ run `node app.js` or using nodemon `nodemon app.js`
 
 open `http://localhost:8888` from browser
 
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Test
