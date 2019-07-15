@@ -26,7 +26,7 @@ app.get('/current_rates', async function (req, res) {
     if(req.query.currency) {
     	result = await exchange.getRate(req.query.currency);
     } else {
-    	result = await exchange.getRate(req.query.currency);
+    	result = await exchange.getRate();
     }
     
     res.json(JSON.parse(result));

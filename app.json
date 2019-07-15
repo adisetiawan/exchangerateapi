@@ -1,0 +1,7 @@
+{
+  "name": "Exchange Rate API",
+  "description": "Simple REST API to get currency exchange from https://docs.openexchangerates.org",
+  "repository": "https://github.com/adisetiawan/exchangerateapi",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "api", "currency", "openexchangerates"],
+}
