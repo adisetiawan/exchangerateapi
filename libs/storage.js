@@ -12,11 +12,11 @@ const storage = {
     return await keyv.set(uri, result, process.env.EXPIRE); // 1 hour
 
   },
-  getCurrency :  async function() {
-    return await keyv.get('currency');
+  getCurrency :  async function(uri) {
+    return await keyv.get(uri);
   },
-  updateCurrency :  async function(currency) {
-    return await keyv.set('currency', currency); // never expires
+  updateCurrency :  async function(uri, result) {
+    return await keyv.set(uri, result); // never expires
 
   },
 

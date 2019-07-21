@@ -23,12 +23,25 @@ app.get('/', function (req, res) {
 app.get('/current_rates', async function (req, res) {
     
 	let result;
-    if(req.query.currency) {
-    	result = await exchange.getRate(req.query.currency);
+    if(req.query.currency != '') {
+    	let isValid = await exchange.isValidCurrency(req.query.currency);
+    	//check if valid 
+    	if(isValid) {
+    		result = await exchange.getRate(req.query.currency);
+    	} else {
+    		res.json({msg: 'invalid currency'});
+    	}
     } else {
     	result = await exchange.getRate();
     }
     
+    res.json(JSON.parse(result));
+
+});
+
+app.get('/currency', async function (req, res) {
+    
+	let result = await exchange.getCurrency();
     res.json(JSON.parse(result));
 
 });
